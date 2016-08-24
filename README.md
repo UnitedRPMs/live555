@@ -2,7 +2,7 @@
  
 Summary:	Live555.com streaming libraries
  
-Version:	2016.06.26
+Version:	2016.08.07
  
 License:	LGPLv2+
  
