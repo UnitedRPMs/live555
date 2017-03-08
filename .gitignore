@@ -1,0 +1,6 @@
+BUILD/*
+BUILDROOT/*
+RPMS/*
+SPECS/*
+SRPMS/*
+live555*.tar.gz
