@@ -1,5 +1,5 @@
 Name:		live555
-Version:	2017.04.26
+Version:	2017.06.04
 Release:	3%{?dist}
 Summary:	Live555.com streaming libraries
 
@@ -124,6 +124,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Sun Jul 09 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.06.04-3
+- Updated to 2017.06.04
 
 * Fri May 19 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.04.26-3
 - Updated to 2017.04.26-3
