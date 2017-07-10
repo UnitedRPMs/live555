@@ -7,6 +7,7 @@ Group:		System Environment/Libraries
 License:	LGPLv2+
 URL:		http://live555.com/liveMedia/
 Source0:	http://live555.com/liveMedia/public/live.%{version}.tar.gz
+BuildRequires:	libcxx-devel
 
 # Packages using live555 must Requires this:
 #{?live555_version:Requires: live555%{?_isa} = %{live555_version}}
@@ -77,6 +78,8 @@ sed \
       -i config.linux
 
 %build
+export CFLAGS="%{optflags}"
+export CPPFLAGS="%{optflags}"
 #./genMakefiles %{_target_os}-with-shared-libraries
 ./genMakefiles linux-with-shared-libraries
 #make %{?_smp_mflags}
@@ -84,7 +87,7 @@ make
 
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix} LIBDIR=%{_libdir}
+make install DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix} LIBDIR=%{_libdir} AM_UPDATE_INFO_DIR=no
 
 #RPM Macros support
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/rpm
