@@ -77,8 +77,9 @@ sed \
       -i config.linux
 
 %build
-./genMakefiles %{_target_os}-with-shared-libraries
-%make_build LDFLAGS="%{?__global_ldflags}"
+#./genMakefiles %{_target_os}-with-shared-libraries
+./genMakefiles linux-with-shared-libraries
+make %{?_smp_mflags}
 
 
 %install
