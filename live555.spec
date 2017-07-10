@@ -79,7 +79,8 @@ sed \
 %build
 #./genMakefiles %{_target_os}-with-shared-libraries
 ./genMakefiles linux-with-shared-libraries
-make %{?_smp_mflags}
+#make %{?_smp_mflags}
+make 
 
 
 %install
