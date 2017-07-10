@@ -78,7 +78,7 @@ sed \
 
 %build
 ./genMakefiles %{_target_os}-with-shared-libraries
-make %{?_smp_mflags}
+%make_build LDFLAGS="%{?__global_ldflags}"
 
 
 %install
