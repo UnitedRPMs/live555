@@ -72,7 +72,9 @@ vobStreamer) and a variety of test tools.
 sed -i -e "s|-O2|$RPM_OPT_FLAGS|" \
   config.linux-with-shared-libraries
 
-sed \
+sed -i '/xlocale.h/d' liveMedia/include/Locale.hh
+
+  sed \
       -e 's/$(INCLUDES) -I. -O2 -DSOCKLEN_T/$(INCLUDES) -I. -O2 -I. -fPIC -DRTSPCLIENT_SYNCHRONOUS_INTERFACE=1 -DSOCKLEN_T/g' \
       -i config.linux
 
