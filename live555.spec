@@ -127,7 +127,7 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 %changelog
 
-* Wed Oct 01 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.10.28-3
+* Wed Nov 01 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.10.28-3
 - Updated to 2017.10.28
 
 * Tue Sep 26 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.09.12-3
