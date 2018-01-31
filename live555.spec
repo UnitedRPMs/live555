@@ -6,7 +6,8 @@ Summary:	Live555.com streaming libraries
 Group:		System Environment/Libraries
 License:	LGPLv2+
 URL:		http://live555.com/liveMedia/
-Source0:	http://live555.com/liveMedia/public/live.%{version}.tar.gz
+Source0:	https://download.videolan.org/pub/contrib/live555/live.%{version}.tar.gz
+#Source0:	http://live555.com/liveMedia/public/live.{version}.tar.gz
 
 # Packages using live555 must Requires this:
 #{?live555_version:Requires: live555{?_isa} = {live555_version}}
