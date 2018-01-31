@@ -1,5 +1,5 @@
 Name:		live555
-Version:	2017.10.28
+Version:	2018.01.24
 Release:	3%{?dist}
 Summary:	Live555.com streaming libraries
 
@@ -9,7 +9,7 @@ URL:		http://live555.com/liveMedia/
 Source0:	http://live555.com/liveMedia/public/live.%{version}.tar.gz
 
 # Packages using live555 must Requires this:
-#{?live555_version:Requires: live555%{?_isa} = %{live555_version}}
+#{?live555_version:Requires: live555{?_isa} = {live555_version}}
 
 
 %description
@@ -126,6 +126,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Tue Jan 30 2018 David Vásquez <davidjeremias82 AT gmail DOT com> 2018.01.24-3
+- Updated to 2018.01.24
 
 * Wed Nov 01 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 2017.10.28-3
 - Updated to 2017.10.28
