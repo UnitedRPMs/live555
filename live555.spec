@@ -1,5 +1,5 @@
 Name:		live555
-Version:	2018.04.25
+Version:	2018.07.01
 Release:	3%{?dist}
 Summary:	Live555.com streaming libraries
 
@@ -8,10 +8,6 @@ License:	LGPLv2+
 URL:		http://live555.com/liveMedia/
 Source0:	https://download.videolan.org/pub/contrib/live555/live.%{version}.tar.gz
 #Source0:	http://live555.com/liveMedia/public/live.{version}.tar.gz
-
-# Packages using live555 must Requires this:
-#{?live555_version:Requires: live555{?_isa} = {live555_version}}
-
 
 %description
 This code forms a set of C++ libraries for multimedia streaming, 
@@ -127,6 +123,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Fri Jul 06 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2018.07.01-3
+- Updated to 2018.07.01
 
 * Thu May 03 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2018.04.25-3
 - Updated to 2018.04.25
