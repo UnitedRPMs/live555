@@ -8,6 +8,7 @@ License:	LGPLv2+
 URL:		http://live555.com/liveMedia/
 Source0:	https://download.videolan.org/pub/contrib/live555/live.%{version}.tar.gz
 #Source0:	http://live555.com/liveMedia/public/live.{version}.tar.gz
+BuildRequires:	gcc-c++
 
 %description
 This code forms a set of C++ libraries for multimedia streaming, 
