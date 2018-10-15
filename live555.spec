@@ -1,6 +1,6 @@
 Name:		live555
-Version:	2018.09.18
-Release:	3%{?dist}
+Version:	2018.10.10
+Release:	7%{?dist}
 Summary:	Live555.com streaming libraries
 
 Group:		System Environment/Libraries
@@ -124,6 +124,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Sun Oct 14 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2018.10.10-3
+- Updated to 2018.10.10
 
 * Wed Sep 26 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2018.09.18-3
 - Updated to 2018.09.18
