@@ -3,5 +3,7 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-live555*.tar.gz
+*.tar.gz
+*.tar.xz
 .directory
+*.rpm
