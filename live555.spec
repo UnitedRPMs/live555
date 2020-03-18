@@ -14,6 +14,8 @@
 
 # Please submit bugfixes or comments via https://goo.gl/zqFJft
 
+%global debug_package %{nil}
+
 Name:		live555
 Version:	2020.03.06
 Release:	7%{?dist}
