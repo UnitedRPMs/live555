@@ -17,7 +17,7 @@
 %global debug_package %{nil}
 
 Name:		live555
-Version:	2020.07.21
+Version:	2020.08.19
 Release:	7%{?dist}
 Summary:	Live555.com streaming libraries
 
@@ -143,6 +143,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Thu Aug 27 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2020.08.19-7
+- Updated to 2020.08.19
 
 * Mon Jul 27 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2020.07.21-7
 - Updated to 2020.07.21
