@@ -1,7 +1,7 @@
 #
 # spec file for package live555
 #
-# Copyright (c) 2020 UnitedRPMs.
+# Copyright (c) 2021 UnitedRPMs.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -17,7 +17,7 @@
 %global debug_package %{nil}
 
 Name:		live555
-Version:	2020.08.19
+Version:	2021.05.03
 Release:	7%{?dist}
 Summary:	Live555.com streaming libraries
 
@@ -91,17 +91,16 @@ sed -i -e "s|-O2|$RPM_OPT_FLAGS|" \
 
 sed -i '/xlocale.h/d' liveMedia/include/Locale.hh
 
-  sed \
-      -e 's/$(INCLUDES) -I. -O2 -DSOCKLEN_T/$(INCLUDES) -I. -O2 -I. -fPIC -DPIC -DXLOCALE_NOT_USED=1 -DRTSPCLIENT_SYNCHRONOUS_INTERFACE=1 -DSOCKLEN_T/g' \
-      -i config.linux
+  sed -E 's|(-DSOCKLEN_T=socklen_t)|\1 -fPIC -DRTSPCLIENT_SYNCHRONOUS_INTERFACE=1|g' -i config.linux
+  ./genMakefiles linux
 
 %build
 ./genMakefiles %{_target_os}-with-shared-libraries
 # make {?_smp_mflags}
-make C_COMPILER="${CC:-gcc}" CPLUSPLUS_COMPILER="${CXX:-g++}"
+%make_build C_COMPILER="${CC:-gcc}" CPLUSPLUS_COMPILER="${CXX:-g++}"
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix} LIBDIR=%{_libdir}
+%make_install PREFIX=%{_prefix} LIBDIR=%{_libdir}
 
 #RPM Macros support
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/rpm
@@ -143,6 +142,9 @@ chmod a+x $RPM_BUILD_ROOT%{_libdir}/*.so*
 
 
 %changelog
+
+* Mon May 17 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2021.05.03-7
+- Updated to 2021.05.03
 
 * Thu Aug 27 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2020.08.19-7
 - Updated to 2020.08.19
